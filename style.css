@@ -1,0 +1,807 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  margin: 0;
+  font: 16px "Montserrat", sans-serif;
+  background-color: rgb(240, 244, 248);
+}
+
+.formBtnDelete {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: flex-end;
+  align-items: end;
+}
+
+.btnDelete {
+  background-color: transparent;
+  /* Делаем фон прозрачным */
+  background-image: url('/assets/img/Delete-80_icon-icons.com_57340.svg');
+  background-repeat: no-repeat;
+  background-size: 1em;
+  /* Отступ для иконки */
+  width: 20px;
+  height: 20px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: flex-end;
+  align-items: end;
+  
+
+}
+
+button.aList {
+  border: 0;
+}
+
+
+h1,
+h2 {
+  color: #0056b3;
+  margin-top: 30px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.groupe {
+  text-align: center;
+  color: #0056b3;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.addGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  color: #0056b3;
+  font-size: 20px;
+}
+
+.addGroupButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+  width: auto;
+  height: auto;
+}
+
+.addGroupButton:hover {
+  background-color: #0056b3;
+}
+
+.addGroupeInputButton {
+  text-align: center;
+}
+
+.addGroupeInput {
+  padding: 5px;
+  margin: 0px 0px 2px 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 12px;
+  width: auto;
+  height: auto;
+}
+
+.addGroupeInput:focus {
+  border: 1px solid #0056b3;
+  outline: none;
+}
+
+.authButton:hover {
+  background-color: #0056b3;
+}
+
+.authInputButton {
+  text-align: center;
+}
+
+.authInput {
+  padding: 5px;
+  margin: 0px 0px 2px 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 12px;
+  width: 250px;
+  height: auto;
+}
+
+.authInput:focus {
+  border: 1px solid #0056b3;
+  outline: none;
+}
+
+.positionListGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.listGroup {
+  color: #0056b3;
+  display: inline;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* @media (max-width: 600px) {
+    .listGroup {
+        grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+        width: 60%;
+    } 
+} */
+
+.aList {
+  /* padding: 20% 10%; */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-wrap: anywhere;
+
+}
+
+.listItem {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+
+}
+
+.listGroup>a,
+.listGroup>button {
+  text-decoration: none;
+  color: #0056b3;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-align: center;
+  display: grid;
+  padding: 10px;
+  padding-right: 0;
+  padding-left: 0;
+  grid-template-columns: 10% auto 10%;
+  grid-template-rows: 10px 50px 10px;
+}
+
+.studentList {
+  padding: 0;
+  margin: 30px;
+  color: #0056b3;
+}
+
+.deleteStudent {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 110px;
+  height: auto;
+  grid-column: 2;
+}
+
+.liStudents {
+  list-style-type: none;
+  padding: 10px;
+  margin: 10px 20%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 70% 30%;
+  align-items: center;
+}
+
+@media (max-width: 1100px) {
+  .liStudents {
+    margin: 10px 10%;
+  }
+}
+
+@media (max-width: 600px) {
+  .liStudents {
+    margin: 10px 1%;
+  }
+}
+
+.editStudent {
+  background-color: #0f6e1f;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 110px;
+  height: auto;
+  grid-column: 1;
+}
+
+.flexButtonsStudents {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+header {
+  display: block;
+  background-color: white;
+  padding: 30px;
+  margin: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.014);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #EBECF1;
+  border-radius: 30px;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #0056b3;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #007bff;
+}
+
+.buttonNav {
+  display: none;
+}
+
+label {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .buttonNav {
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+  }
+
+  header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    text-decoration: none;
+
+  }
+
+  header {
+    display: none;
+  }
+
+
+
+
+  input[type="checkbox"]:checked~header {
+    display: block;
+
+  }
+
+  input[type="checkbox"]+.buttonNav label svg {
+    display: block;
+  }
+
+
+
+  /* Стилизуем кастомный чекбокс */
+  label {
+    cursor: pointer;
+    display: block;
+  }
+
+  label svg {
+    width: 24px;
+    height: 24px;
+    fill: transparent;
+    stroke: #ccc;
+    transition: all 0.3s;
+    margin: 40px 5px 0 20px;
+  }
+
+
+
+}
+
+.tableStudentsExercise {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tdHeaderExercise {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tableStudentsExercise td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 13px;
+  text-align: center;
+}
+
+
+td select {
+  padding: 2px 5px;
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 12px;
+  width: auto;
+  height: auto;
+}
+
+td select:hover {
+  border: 1px solid #007bff;
+}
+
+td select:focus {
+  border: 1px solid #0056b3;
+  outline: none;
+}
+
+.inputPercent {
+  padding: 5px;
+  margin: 0px 0px 2px 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 12px;
+  width: auto;
+  height: auto;
+}
+
+.tableAssessmentSystem {
+  width: 70%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tdAssessmentSystem {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tableAssessmentSystem td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 13px;
+  text-align: center;
+}
+
+.trAssessmentSystem:hover {
+  background-color: #e9f5ff;
+}
+
+.inputPercent {
+  padding: 5px;
+  margin: 0px 0px 2px 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 12px;
+  width: auto;
+  height: auto;
+  text-align: center;
+}
+
+.inputPercent:focus {
+  border: 1px solid #0056b3;
+  outline: none;
+}
+
+.inputPercent:hover {
+  border: 1px solid #007bff;
+}
+
+.assessmentFinalList {
+  padding: 0;
+  margin: 30px;
+  color: #0056b3;
+  width: 50%;
+  list-style: none;
+  margin: 30px auto;
+}
+
+.liAssessmentFinal {
+  list-style-type: none;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.liAssessmentFinal li {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.liAssessmentFinal p {
+  flex-grow: 0;
+  text-align: right;
+  font-size: 1.2em;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+section {
+  border: 1px solid #19029e;
+  border-radius: 10px;
+  margin: 10px 90px;
+  background-color: #fdfdfd00;
+  padding: 10px;
+  padding-bottom: 50px;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+
+}
+
+
+
+.modalFlex {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.modal p {
+  color: #0056b3;
+  text-align: center;
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.addGroupeInput {
+  width: 40%;
+}
+
+
+.positionListStudent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.listStudent>a {
+  text-decoration: none;
+  color: #0056b3;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-align: center;
+  display: grid;
+  padding: 10px;
+  padding-right: 0;
+  padding-left: 0;
+  grid-template-columns: 25% auto 25%;
+  grid-template-rows: 25px 50px 25px;
+}
+
+.listStudent {
+  color: #0056b3;
+  display: inline;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 50%;
+}
+
+.listAddlessonsTests {
+  color: #0056b3;
+  display: inline;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 50%;
+}
+
+.listAddlessonsTests>a {
+  text-decoration: none;
+  color: #0056b3;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-align: center;
+  display: grid;
+  padding: 10px;
+  padding-right: 0;
+  padding-left: 0;
+  grid-template-columns: 25% auto 25%;
+  grid-template-rows: 25px 50px 25px;
+}
+
+.aListLessonsTests {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-wrap: anywhere;
+
+}
+
+
+.lessonList {
+  padding: 0;
+  margin: 30px;
+  color: #0056b3;
+  width: 70%;
+}
+
+
+.liLessons {
+  list-style-type: none;
+  padding: 10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto 9%; /* checkbox | title | delete button */
+  align-items: center;
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown > a {
+  display: block;
+  text-decoration: none;
+  color: #0056b3;
+}
+
+.lessonList > li {
+  list-style: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  z-index: 1000;
+}
+
+.dropdown-content .lessonList { margin: 0; padding: 0; }
+.dropdown-content .lessonList > li { list-style: none; }
+
+/* .liLessons {
+    padding: 10px;
+    border-radius: 5px;
+} */
+
+.lessonListItems {
+  padding: 0;
+  color: #0056b3;
+  width: 100%;
+}
+
+
+
+/* Lesson title in the middle column */
+.liLessons > li {
+  grid-column: 1;
+  list-style: none;
+  margin-left: 3%;
+}
+
+  .checkboxLesson{
+    background-color: transparent;
+  /* Делаем фон прозрачным */
+  background-image: url('/assets/img/Delete-80_icon-icons.com_57340.svg');
+  background-repeat: no-repeat;
+  background-size: 1em;
+  }
+
+/* Custom checkbox with cross (unchecked) and check (checked) */
+input[type="checkbox"].checkboxLesson {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  background-image: url('/assets/img/Delete-80_icon-icons.com_57340.svg'); /* cross when false */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+input[type="checkbox"].checkboxLesson:checked {
+  background-image: url('/assets/img/gui-checkmark.svg'); /* check when true */
+}
+
+/* Keyboard focus visibility */
+input[type="checkbox"].checkboxLesson:focus-visible {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+
+
+
+
+
+.liLessons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.lesson-content {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.delete-button-container {
+  display: flex;
+  align-items: center;
+}
+
+.btn-delete {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: #d9302d;
+}
+
+
+
+
+/* Добавляем свою иконку */
+.addGroupeInputDate:before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16"><path d="M1 2a1 1 1 0 0 1 1-1h12a1 1 1 0 0 1 1 1v12a1 1 1 0 0 1-1 1H2a1 1 1 0 0 1-1-1V2zm1 0v14h12V2H2zm5 1h2a1 1 1 0 1 0 0-2H8a1 1 1 0 1 0 0 2z"/></svg>');
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #0056b3;
+}
+
+.addGroupeInputDate {
+  /* Убираем стандартные стили браузера */
+  appearance: none;
+  -webkit-appearance: none;
+  
+  /* Основные параметры */
+  padding: 10px;
+  background-color: #f8f9fa;
+  color: #0056b3;
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+  font-size: 12px;
+  width: 200px;
+}
+
+/* Стилизуем иконку календаря */
+.addGroupeInputDate::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  color: #0056b3;
+}
+
+/* Фокусировка */
+.addGroupeInputDate:focus {
+  border-color: #0056b3;
+  box-shadow: 0.2rem #0056b3;
+}

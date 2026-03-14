@@ -1,0 +1,21 @@
+<form class="formButton" action="../controllers/delete_group_course.php" method="get">
+                         <button type="submit" name="id" value="%s" class="btnDelete"></button>
+                        <a href="../controllers/delete_group_course.php" class="btnDelete">
+                     </form>
+
+
+
+                     <a  href="">
+                <div class="aList">
+                    <li class="listItem">%s</li>
+                    <a class="aBtnDelete" href="../controllers/delete_group_course.php">
+                        <button class="btnDelete"></button>
+                    </a>
+                    </div>
+                </a>
+
+                type="submit" formmethod="get" name="id" value="%s" formaction="../controllers/delete_group_course.php?id=%s"
+
+                <form class="formBtnDelete" method="get">
+                        <button onclick="showModal()" type="submit" formmethod="get" name="id" value="%s" formaction="../controllers/delete_group_course.php?id=%s" class="btnDelete"></button>
+                    </form>

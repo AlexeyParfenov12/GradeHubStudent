@@ -1,1 +1,1 @@
-# GradeHubStudent
+# GradeHub
